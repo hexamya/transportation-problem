@@ -145,7 +145,7 @@ def vogel(supply, demand, cost):
             d[j] = d[j]-a
             s[i] = s[i]-a
             if d[j]==0:
-                np.where(assign[:,j]==-1,0,assign[:,j])
+                assign[:,j] = np.where(assign[:,j]==-1,0,assign[:,j])
                 c[:,j] = np.inf
             elif s[i]==0:
                 assign[i,:] = np.where(assign[i,:]==-1,0,assign[i,:])
