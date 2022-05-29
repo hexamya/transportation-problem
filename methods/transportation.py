@@ -153,7 +153,7 @@ def vogel(supply, demand, cost):
             assign[i,j] = a
             c[i,j] = np.inf
         n += 1
-        if n>100:
+        if n>1000:
             break
     
     z = (assign.ravel()*cc.A1).sum()
