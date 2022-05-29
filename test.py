@@ -1,4 +1,5 @@
 # TEST
+from methods.transportation import *
 
 s1 = [110,160,150]
 d1 = [140,200,80]
