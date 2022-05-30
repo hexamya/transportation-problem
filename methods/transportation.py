@@ -100,6 +100,8 @@ def vogel(supply, demand, cost):
             ro.sort()
             if any(np.isinf(ro)[:2]):
                 pr = np.append(pr,np.nan)
+            elif ro[1]-ro[0] == 0:
+                pr = np.append(pr,-1)
             else:
                 pr = np.append(pr,ro[1]-ro[0])
         for col in c.T:
@@ -108,6 +110,8 @@ def vogel(supply, demand, cost):
             co.sort()
             if any(np.isinf(co)[:2]):
                 pc = np.append(pc,np.nan)
+            elif co[1]-co[0] == 0:
+                pc = np.append(pc,-1)
             else:
                 pc = np.append(pc,co[1]-co[0])
         pr = np.where(np.isnan(pr) | np.isinf(pr),0,pr)
@@ -153,9 +157,7 @@ def vogel(supply, demand, cost):
             assign[i,j] = a
             c[i,j] = np.inf
         n += 1
-        if n>1000:
+        if n>100:
             break
-    
     z = (assign.ravel()*cc.A1).sum()
     return (assign, z)
-            
