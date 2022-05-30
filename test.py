@@ -27,3 +27,12 @@ print('row minimum method:', row_min(s3,d3,c3), sep='\n')
 print('column minimum method:', col_min(s3,d3,c3), sep='\n')
 print('least cost method:', least_cost(s3,d3,c3), sep='\n')
 print('vogel method:', vogel(s3,d3,c3), sep='\n')
+
+s4 = [120,180,100]
+d4 = [100,50,150]
+c4 = [[4,8,3],[2,5,4],[1,5,4]]
+print('north west corner method:', north_west_corner(s4,d4,c4), sep='\n')
+print('row minimum method:', row_min(s4,d4,c4), sep='\n')
+print('column minimum method:', col_min(s4,d4,c4), sep='\n')
+print('least cost method:', least_cost(s4,d4,c4), sep='\n')
+print('vogel method:', vogel(s4,d4,c4), sep='\n')
